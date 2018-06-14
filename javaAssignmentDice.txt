@@ -1,0 +1,111 @@
+import java.util.Scanner;
+
+import java .util.Random;
+
+class Dice1{
+
+    int sides;
+
+    int rInt;
+
+    int randomGenerator;
+
+        public Dice1(int sides){
+
+            this.sides=sides;
+
+        }
+
+        public String roll(){
+
+            Random randomGenerator=new Random();
+
+            switch (sides){
+ 
+                case 2:
+
+                    rInt=randomGenerator.nextInt(2);
+
+                    if(rInt==1)
+
+                    return "Heads";
+
+                    else return "tails";
+
+                    case 4:
+
+                    rInt=randomGenerator.nextInt(4)
+;
+                    if(rInt==1)
+
+                    return "one";
+
+                    else if(rInt==2)
+ 
+                    return "two";
+
+                    else if(rInt==3)
+ 
+                    return "three";
+
+                    else
+
+                    return "four";
+
+                    case 6:
+
+                    rInt=randomGenerator.nextInt(6);
+
+                    if(rInt==1)
+
+                    return "one";
+
+                    else if(rInt==2)
+ 
+                    return "two";
+
+                    else if(rInt==3)
+ 
+                    return "three";
+
+                    else if(rInt==4) 
+
+                    return "four";
+ 
+                   else if(rInt==5)
+ 
+                    return "five";
+
+                    else
+           
+         return "six";
+             
+       //break;
+                
+default:
+              
+  return "no. of sides must be 2,4 or 6 only..";
+ 
+           }
+}
+}
+
+
+public class Dice{
+
+     public static void main(String []args){
+
+        System.out.println("enter no. of sides");
+
+        Scanner sc=new Scanner(System.in);
+
+        int sides=sc.nextInt();
+
+        Dice1 dice1=new Dice1(sides);
+
+        String result=dice1.roll();
+
+        System.out.println(result);
+
+        }
+}
